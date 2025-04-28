@@ -10,18 +10,18 @@ function App() {
 
   const shiftAlphabetStrict = (str, shift) => {
     return str.split('').map(char => {
-      if (char >= 'A' && char <= 'Z') {
+      if (char >= 'A' && char <= 'Y') {
         const code = char.charCodeAt(0);
         const shiftedCode = code + shift;
-        if (shiftedCode < 'A'.charCodeAt(0) || shiftedCode > 'Z'.charCodeAt(0)) {
+        if (shiftedCode < 'A'.charCodeAt(0) || shiftedCode > 'Y'.charCodeAt(0)) {
           return char;
         }
         return String.fromCharCode(shiftedCode);
   
-      } else if (char >= 'a' && char <= 'z') {
+      } else if (char >= 'a' && char <= 'y') {
         const code = char.charCodeAt(0);
         const shiftedCode = code + shift;
-        if (shiftedCode < 'a'.charCodeAt(0) || shiftedCode > 'z'.charCodeAt(0)) {
+        if (shiftedCode < 'a'.charCodeAt(0) || shiftedCode > 'y'.charCodeAt(0)) {
           return char;
         }
         return String.fromCharCode(shiftedCode);
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="my-4">
+      <Container className="mt-4">
         <h2 className="mb-4 text-center">Key Shift Tool</h2>
 
         <Form>
@@ -66,6 +66,12 @@ function App() {
               onChange={(e) => setShiftAmount(e.target.value)}
             />
           </Form.Group>
+
+        <div class="py-1 mt-3">
+          <div class="alert alert-danger" role="alert">
+            <i class="bi bi-exclamation-circle"></i> A ~ Y の幅を超えるシフトは行えません。
+          </div>
+        </div>
 
           <Button variant="primary" onClick={handleConvert}>
             変換する
