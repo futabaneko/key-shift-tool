@@ -68,7 +68,7 @@ function App() {
           </Form.Group>
 
         <div class="py-1 mt-3">
-          <div class="alert alert-danger" role="alert">
+          <div class="alert alert-secondary" role="alert">
             <i class="bi bi-exclamation-circle"></i> A ~ Y の幅を超えるシフトは行えません。
           </div>
         </div>

@@ -6,7 +6,7 @@ function Header() {
     return (
         <nav className="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Key Shift Tool</a>
+          <label className="navbar-brand">Key Shift Tool</label>
         </div>
         </nav>
     );
